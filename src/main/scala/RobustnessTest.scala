@@ -130,6 +130,7 @@ object RobustnessTest {
 
     clear()
     draw()
+
   }
 
 }
