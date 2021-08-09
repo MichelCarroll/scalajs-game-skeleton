@@ -1,12 +1,13 @@
 import org.scalajs.dom
+import org.scalajs.dom.document
 import org.scalajs.dom.html.Canvas
-import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
-@JSExportTopLevel("Main")
 object Main {
 
-  @JSExport
-  def start(canvas: Canvas): Unit = {
+  def main(args: Array[String]): Unit = {
+
+    val canvas = document.createElement("canvas").asInstanceOf[Canvas]
+    document.body.appendChild(canvas)
 
     val ctx = canvas.getContext("2d")
       .asInstanceOf[dom.CanvasRenderingContext2D]
